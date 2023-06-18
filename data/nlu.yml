@@ -1,0 +1,1065 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hello.
+    - Hi.
+    - Hey.
+    - Good morning.
+    - Good afternoon.
+    - Good evening.
+    - Hi there.
+    - Howdy.
+    - Hey there.
+    - What's up?
+    - How's it going?
+    - Hiya.
+    - How are you?
+    - How's it going?
+    - How's everything?
+    - How's your day?
+    - How's your day going?
+    - Good to see you.
+    - Great to see you.
+    - Nice to see you.
+    - Glad to see you.
+    - Salutations.
+    - Greetings.
+    - Hi, how are you?
+    - Hi, how's it going?
+    - Hello, how are you?
+    - Hello, how's your day?
+    - Hey, how's it going?
+    - Hey, how are you?
+    - What's new?
+    - What's good?
+    - What's going on?
+    - How's life treating you?
+    - Long time no see.
+    - It's been a while.
+    - Good to meet you.
+    - Pleased to meet you.
+    - How have you been?
+    - How do you do?
+    - Yo!
+    - Hi, nice to meet you.
+    - Hello, nice to meet you.
+    - How are things?
+    - How's your afternoon?
+    - How's your morning?
+    - How's your evening?
+    - Good day to you.
+    - Hi, how are you doing?
+    - Hello, how are you doing?
+    - How are things with you?
+    - Hey, how are things going?
+    - Hi, good to see you.
+    - Hi, glad to see you.
+    - Hello, good to see you.
+    - Hello, glad to see you.
+    - Greetings and salutations!
+    - How's everything going?
+    - How're you doing?
+    - How're things going?
+    - Hi, how's everything?
+    - Hi, what's new?
+    - Hi, what's good?
+    - Hi, what's going on?
+    - Hello, what's new?
+    - Hello, what's good?
+    - Hello, what's going on?
+    - Top of the morning to you.
+    - How's everything with you?
+    - How's it hanging?
+    - How are you getting on?
+    - How are you keeping?
+    - Hello, how are you getting on?
+    - Hello, how are you keeping?
+    - Good to have you here.
+    - Good you're here.
+    - Glad you're here.
+    - It's good to see you.
+    - It's great to see you.
+    - Hi, how's your day been?
+    - Hello, how's your day been?
+    - It's nice to meet you.
+    - It's a pleasure to meet you.
+    - It's good to meet you.
+    - It's great to meet you.
+    - Hi, good to have you here.
+    - Hello, good to have you here.
+    - Hi there, how have you been?
+    - Hi there, how's your day going?
+    - Hello there, how have you been?
+    - Hello there, how's your day going?
+    - Hi, long time no see.
+    - Hello, long time no see.
+    - Hi, it's been a while.
+    - Hello, it's been a while.
+    - Hi, good to be here.
+    - Hello, good to be here
+
+- intent: apply_for_leave
+  examples: |
+    - I want to apply for leave from [next Monday](start_date) to [Friday](end_date) for [5 days](number_of_leaves)
+    - Can I take leave from [July 1st](start_date) to [July 5th](end_date)?
+    - I need to apply for leave starting from [tomorrow](start_date) until [next Wednesday](end_date)
+    - Please grant me leave from [June 28th](start_date) until [July 2nd](end_date) for [3 days](number_of_leaves)
+    - I won't be available from [today](start_date) to [next Thursday](end_date), so I need leave for [4 days](number_of_leaves)
+    - Can I have leave from [this Friday](start_date) to [next Monday](end_date)?
+    - I want to take leave for [2 days](number_of_leaves) starting from [next Tuesday](start_date)
+    - Please approve my leave request from [July 15th](start_date) until [July 20th](end_date)
+    - I need to apply for leave from [August 10th](start_date) to [August 15th](end_date) for [6 days](number_of_leaves)
+    - Can I take leave from [next month](start_date) to [the following month](end_date)?
+    - I won't be able to come to work from [July 7th](start_date) until [July 12th](end_date) for [5 days](number_of_leaves)
+    - Please grant me leave from [next Friday](start_date) to [the Monday after next](end_date)
+    - I need to take leave from [next week](start_date) to [the week after](end_date) for [7 days](number_of_leaves)
+    - Can I have leave from [July 25th](start_date) to [July 27th](end_date) for [3 days](number_of_leaves)?
+    - I would like to apply for leave starting from [next month](start_date) until [the end of the month](end_date)
+    - Please approve my leave request from [July 10th](start_date) until [July 20th](end_date) for [10 days](number_of_leaves)
+    - I need to take leave from [next Monday](start_date) to [the following Friday](end_date) for [5 days](number_of_leaves)
+    - Can I take leave from [tomorrow](start_date) until [the day after tomorrow](end_date)?
+    - I want to apply for leave from [this Monday](start_date) to [the Wednesday after](end_date) for [3 days](number_of_leaves)
+    - I won't be available from [next Thursday](start_date) to [the following Monday](end_date), so I need leave for [4 days](number_of_leaves)
+    - I would like to apply for leave for [today](start_date).
+    - Can I apply for leave for [tomorrow](start_date)?
+    - Please help me apply for leave from [Monday](start_date) to [Wednesday](end_date).
+    - I need to apply for leave for [3](number_of_leaves) days starting from [June 20](start_date).
+    - I wish to apply for leave on [July 10](start_date) because of a [family event](reason_for_leave).
+    - I am sick and need to apply for leave [today](start_date).
+    - I would like to apply for [two](number_of_leaves) leaves from [next Monday](start_date) due to [personal reasons](reason_for_leave).
+    - I want to apply for a leave on [next Friday](start_date) for a [doctor's appointment](reason_for_leave).
+    - Can I apply for [4](number_of_leaves) leaves starting [next week](start_date)?
+    - I want to apply for leave on [25th June](start_date) because of [travel plans](reason_for_leave).
+    - I won't be able to attend [tomorrow's](start_date) classes, so I would like to apply for leave.
+    - I need to apply for leave for [2](number_of_leaves) days starting [next week](start_date).
+    - I want to apply for leave on [August 15](start_date) for a [family function](reason_for_leave).
+    - Can I apply for leave on [June 30](start_date) due to [personal reasons](reason_for_leave)?
+    - I have a [doctor's appointment](reason_for_leave) and need to apply for leave [next Monday](start_date).
+    - Could you help me apply for leave from [July 1](start_date) to [July 3](end_date)?
+    - I want to apply for [3](number_of_leaves) days leave starting from [next Wednesday](start_date).
+    - I have a [wedding to attend](reason_for_leave) and need to apply for leave on [July 20](start_date).
+    - I'm feeling unwell and need to apply for leave for [today](start_date).
+    - I'd like to apply for leave from [August 1](start_date) to [August 5](end_date) for a [family trip](reason_for_leave).
+    - I'm [not feeling well](reason_for_leave), need a leave for [today](start_date).
+    - I want to apply for a leave [tomorrow](start_date) because of a [doctor's appointment](reason_for_leave).
+    - I wish to apply for leave from [next Monday](start_date) till [next Friday](end_date) for a [family event](reason_for_leave).
+    - I'd like to apply for leave on [July 23rd](start_date) for [personal reasons](reason_for_leave).
+    - Could I apply for leave for [two](number_of_leaves) days next week due to [personal work](reason_for_leave)?
+    - I would like to apply for a leave on [August 2](start_date) for a [wedding](reason_for_leave).
+    - I am [feeling unwell](reason_for_leave) and want to apply for leave for [today](start_date).
+    - I have an [emergency at home](reason_for_leave), I need to apply for leave [today](start_date).
+    - I want to apply for [three](number_of_leaves) days leave starting from [June 30](start_date) for a [personal trip](reason_for_leave).
+    - I need to apply for leave from [July 11](start_date) to [July 15](end_date) due to [health issues](reason_for_leave).
+    - I will [not be available](reason_for_leave) on [next Monday](start_date), I need to apply for leave.
+    - I'd like to take leave for [4](number_of_leaves) days starting [July 1](start_date) for a [vacation](reason_for_leave).
+    - I have a [family event](reason_for_leave), so I need to apply for leave on [July 18](start_date).
+    - I have to attend a [wedding](reason_for_leave) on [June 28](start_date), I would like to apply for leave.
+    - I would like to apply for leave for [next Wednesday](start_date) for [personal work](reason_for_leave).
+    - I want to apply for a leave on [August 5](start_date) for [personal reasons](reason_for_leave).
+    - I am [feeling sick](reason_for_leave) and would like to apply for leave for [today](start_date).
+    - I'll be off for a couple of days starting [Monday](start_date).
+    - I'm going to need [3 days](number_of_leaves) off starting [today](start_date).
+    - I'm planning to take a break from [tomorrow](start_date) to [Friday](end_date).
+    - [Next week](start_date), I won't be available.
+    - I need to be away from [15th July](start_date) to [17th July](end_date).
+    - I am going to be out of town from [Monday](start_date) to [Wednesday](end_date).
+    - Taking a few days off, [3 days](number_of_leaves) to be exact.
+    - I won't be around from [June 12th](start_date) till [June 15th](end_date).
+    - I'll be on leave from [today](start_date) for [2 days](number_of_leaves).
+    - Taking a break from [next Tuesday](start_date).
+    - I need to apply for a leave for [3](number_of_leaves) days from [next Thursday](start_date) due to a [family emergency](reason_for_leave).
+    - I wish to take a leave on [July 3rd](start_date) as I have a [doctor's appointment](reason_for_leave).
+    - I need a leave on [July 10](start_date) due to a [family function](reason_for_leave).
+    - I want to apply for a leave on [August 1st](start_date) for a [personal task](reason_for_leave).
+    - I need to apply for leave from [next Tuesday](start_date) to [next Friday](end_date) due to a [family emergency](reason_for_leave).
+    - I want to apply for a leave on [July 8](start_date) as I am [not feeling well](reason_for_leave).
+    - I wish to apply for [5](number_of_leaves) days leave starting from [July 5th](start_date) for a [vacation](reason_for_leave).
+    - I would like to apply for leave on [July 15](start_date) for [personal reasons](reason_for_leave).
+    - I have a [dentist's appointment](reason_for_leave) on [July 13](start_date), so I need to apply for leave.
+    - I am going on a [vacation](reason_for_leave) and need to apply for [7](number_of_leaves) days leave starting [August 5](start_date).
+    - I would like to apply for leave on [August 2](start_date) for a [family gathering](reason_for_leave).
+    - I need to apply for [3](number_of_leaves) days leave starting [July 20](start_date) for a [trip](reason_for_leave).
+    - I wish to apply for leave on [July 17](start_date) due to a [personal commitment](reason_for_leave).
+    - I'm [sick](reason_for_leave), won't be able to attend [today](start_date).
+    - Need to skip [tomorrow](start_date), got a [dentist appointment](reason_for_leave).
+    - Gotta take off from [next Monday](start_date) till [next Friday](end_date), got a [family thing](reason_for_leave).
+    - Need to chill on [July 23rd](start_date), [personal day](reason_for_leave).
+    - Got some [personal stuff](reason_for_leave) to handle, won't be in for [two](number_of_leaves) days next week.
+    - Can't make it on [August 2](start_date), going to a [wedding](reason_for_leave).
+    - Feeling a bit [under the weather](reason_for_leave), gonna need to take off [today](start_date).
+    - Got an [emergency at home](reason_for_leave), won't be in [today](start_date).
+    - Taking a [mini vacation](reason_for_leave), gonna be off for [three](number_of_leaves) days starting from [June 30](start_date).
+    - Not doing so great, need to take off from [July 11](start_date) to [July 15](end_date) to deal with [health stuff](reason_for_leave).
+    - Got stuff to do [next Monday](start_date), need the day off.
+    - Taking a [little vacation](reason_for_leave), gonna be out for [4](number_of_leaves) days starting [July 1](start_date).
+    - Got a [family event](reason_for_leave), so won't be here on [July 18](start_date).
+    - Going to a [wedding](reason_for_leave) on [June 28](start_date), need the day off.
+    - Need to handle some [personal work](reason_for_leave) [next Wednesday](start_date), won't be around.
+    - Gonna need to skip out on [August 5](start_date) for some [personal stuff](reason_for_leave).
+    - Feeling a bit [sick](reason_for_leave), need to take off [today](start_date).
+    - Got a [family emergency](reason_for_leave), gonna need to take [3](number_of_leaves) days off starting [next Thursday](start_date).
+    - Got a [doctor's appointment](reason_for_leave) on [July 3rd](start_date), need the day off.
+    - Got a [family function](reason_for_leave) on [July 10](start_date), need to skip.
+    - Gotta handle a [personal task](reason_for_leave) on [August 1st](start_date), need the day off.
+    - Got a [family emergency](reason_for_leave), need to take off from [next Tuesday](start_date) to [next Friday](end_date).
+    - Not feeling great, need to take off [July 8](start_date).
+    - Taking a [vacation](reason_for_leave), gonna be gone for [5](number_of_leaves) days starting [July 5th](start_date).
+    - Need a [personal day](reason_for_leave) on [July 15](start_date).
+    - Got a [dentist's appointment](reason_for_leave) on [July 13](start_date), need to take off.
+    - Going on a [vacation](reason_for_leave), gonna need [7](number_of_leaves) days off starting [August 5](start_date).
+    - Got a [family gathering](reason_for_leave) on [August 2](start_date), need the day off.
+    - Going on a [trip](reason_for_leave), need [3](number_of_leaves) days off starting [July 20](start_date).
+    - Got a [personal commitment](reason_for_leave) on [July 17](start_date), need the day off.
+
+
+- intent: ask_for_grades
+  examples: |
+    - Can I know my grade for [Maths](subject)?
+    - What is my grade for the [second semester](semester)?
+    - Can I check my grades for the [entire degree](degree)?
+    - What grade did I get in the [midterm](exam_type)?
+    - Can you tell me my grade for [Physics](subject) in the [final exam](exam_type)?
+    - How did I do in [Biology](subject) this [semester](semester)?
+    - Can I check my grades for [Chemistry](subject) in the [midterm exams](exam_type)?
+    - What are my grades for [third semester](semester)?
+    - How did I perform in the [final exams](exam_type)?
+    - Can I get my grades for [English Literature](subject)?
+    - Can I know my grades for [Statistics](subject)?
+    - Could you tell me my grade for the [first semester](semester)?
+    - I would like to check my grades for the [entire degree](degree).
+    - How did I fare in the [final exams](exam_type)?
+    - Can I know my grades for [Physics](subject) for the [midterm](exam_type)?
+    - How did I perform in [Maths](subject) this [semester](semester)?
+    - What is my grade for [Chemistry](subject) in the [final exams](exam_type)?
+    - Can I get my grades for [third semester](semester)?
+    - What grade did I get in the [midterm exams](exam_type)?
+    - I want to know my grades for [Biology](subject) this [semester](semester).
+    - How did I do in [Physics](subject) this semester?
+    - Can you tell me my [final exam](exam_type) grades for [Chemistry](subject)?
+    - What's my grade in [Biology](subject) for the [midterm](exam_type)?
+    - Can I get my grades for the [second semester](semester)?
+    - How did I do in [Mathematics](subject) for the [midterm](exam_type)?
+    - Can I see my grades for the [third semester](semester)?
+    - How did I do in [Physics](subject) on the [final exam](exam_type)?
+    - Can I see my grades for [English Literature](subject)?
+    - How am I doing in [Maths](subject)?
+    - Can you tell me my grades for [Physics](subject)?
+    - I'd like to see my [Chemistry](subject) grades.
+    - I want to check my scores in [English](subject).
+    - How did I perform in [Biology](subject)?
+    - What are my grades in [Computer Science](subject)?
+    - I'm interested in my grades for [Economics](subject).
+    - Can you show me my marks for [Social Studies](subject)?
+    - I'd like to know my performance in [Geography](subject).
+    - I want to see how I did in [History](subject).
+    - How am I doing in the [entire degree](degree) program?
+    - What were my grades in [History](subject) in the [second semester](semester)?
+    - Can you tell me my grades for the [Mathematics](subject) [midterm](exam_type)?
+    - How am I doing in the [entire degree](degree) program?
+    - What's my [Physics](subject) grade for the [final exam](exam_type)?
+    - How did I do in [Chemistry](subject) this semester?
+    - What's my grade in [Biology](subject) for the [second semester](semester)?
+    - Can you tell me my [Mathematics](subject) grade for the [midterm](exam_type)?
+    - Can I see my grades for the [first semester](semester)?
+    - How did I do in [English Literature](subject) on the [final exam](exam_type)?
+    - Can I know my grade in [Physics](subject) for the [midterm](exam_type)?
+    - What were my grades in [Chemistry](subject) in the [second semester](semester)?
+    - How did I do in [Biology](subject) in the [first semester](semester)?
+    - What's my grade in [Mathematics](subject) on the [final exam](exam_type)?
+    - How did I do in [English Literature](subject) for the [midterm](exam_type)?
+    - Can I know my grades for the [entire degree](degree) program?
+    - What's my grade in [Physics](subject) in the [first semester](semester)?
+    - How did I do in [Chemistry](subject) on the [final exam](exam_type)?
+    - What's my grade in [Biology](subject) for the [midterm](exam_type)?
+    - Can I see my grades for the [third semester](semester)?
+    - How did I do in [Mathematics](subject) on the [final exam](exam_type)?
+    - Can you show me my grades for the [entire degree](degree) program?
+    - Could you please tell me my grades for [Physics](subject) this semester?
+    - What is my grade in [Chemistry](subject) for the [final exam](exam_type)?
+    - Could you inform me about my grade in [Biology](subject) for the [midterm](exam_type)?
+    - I would like to know my grades for the [second semester](semester).
+    - Please tell me my grades in [Mathematics](subject) for the [midterm](exam_type).
+    - I need to check my grades for the [third semester](semester).
+    - I would like to see my grades for [Physics](subject) in the [final exam](exam_type).
+    - Could you show me my grades for [English Literature](subject)?
+    - I would like to know my grades for the [entire degree](degree) program.
+    - What were my grades in [History](subject) in the [second semester](semester)?
+    - Could you tell me my grades for the [Mathematics](subject) [midterm](exam_type)?
+    - I would like to know my grades for the [entire degree](degree) program.
+    - Please inform me about my [Physics](subject) grades for the [final exam](exam_type).
+    - Could you please let me know my grades for [Chemistry](subject) this semester?
+    - I need to know my grades for [Biology](subject) for the [second semester](semester).
+    - Please tell me my grades in [Mathematics](subject) for the [midterm](exam_type).
+    - I would like to check my grades for the [first semester](semester).
+    - Could you tell me my grades in [English Literature](subject) in the [final exam](exam_type)?
+    - I need to know my grades in [Physics](subject) for the [midterm](exam_type).
+    - Can you show me my grades for [Chemistry](subject) in the [second semester](semester)?
+    - What were my grades in [Biology](subject) in the [first semester](semester)?
+    - I would like to see my grades for [Mathematics](subject) in the [final exam](exam_type).
+    - Could you please show me my grades for [English Literature](subject) for the [midterm](exam_type)?
+    - I need to know my grades for the [entire degree](degree) program.
+    - Can you inform me about my grades for [Physics](subject) in the [first semester](semester)?
+    - I would like to see my grades for [Chemistry](subject) for the [final exam](exam_type).
+    - Could you please let me know my grades for [Biology](subject) in the [midterm](exam_type)?
+    - I need to check my grades for the [third semester](semester).
+    - What were my grades in [Mathematics](subject) in the [final exam](exam_type)?
+    - Can you show me my grades for the [entire degree](degree) program?
+
+- intent: ask_for_class_schedule
+  examples: |
+    - When is the [Maths](subject) class by [Professor X](teacher)?
+    - Can you tell me the schedule for the [Physics](subject) class?
+    - When will the class for [Biology](subject) by [Dr. Y](teacher) be held?
+    - Can you let me know when the next [Chemistry](subject) class by [Professor Z](teacher) is?
+    - What is the class schedule for [English Literature](subject)?
+    - When is [Professor A](teacher)'s [Economics](subject) class?
+    - When will the [Physics](subject) class be held [today](date)?
+    - Can I get the schedule for [Biology](subject) class for [tomorrow](date)?
+    - When is the [History](subject) class by [Professor B](teacher)?
+    - What is the class schedule for [Professor C](teacher)'s [Geography](subject) class?
+    - Can I know the schedule for [Physics](subject) class by [Dr. B](teacher)?
+    - When is the next class for [Maths](subject) by [Professor Y](teacher)?
+    - When is the next class for [Physics](subject)?
+    - Can you tell me the schedule for [Maths](subject) classes?
+    - When is [Dr. Ahmed](teacher)'s next lecture?
+    - I want to know the timings for [English](subject) classes.
+    - What's the schedule for [Biology](subject) lessons?
+    - Can you show me the timetable for [Chemistry](subject) classes?
+    - I'd like to know when [Computer Science](subject) classes are held.
+    - When is the next class with [Prof. Fatima](teacher)?
+    - What's the schedule for [Geography](subject) classes?
+    - Can you tell me when [History](subject) classes are?
+    - Could you tell me when is the [Chemistry](subject) class by [Dr. Z](teacher)?
+    - When is [Professor X](teacher)'s [Economics](subject) class scheduled?
+    - What's the schedule for [English Literature](subject) class?
+    - Can you tell me the time for [Biology](subject) class [tomorrow](date)?
+    - When is the [Physics](subject) class by [Professor M](teacher)?
+    - Can I know the schedule for [History](subject) class for [next week](date)?
+    - When is [Professor N](teacher)'s [Geography](subject) class scheduled?
+    - What's the schedule for [Literature](subject) class by [Professor O](teacher)?
+    - When is [Dr. Ahmed's](teacher) class?
+    - What's the time for [Physics](subject) class this week?
+    - When do I have [Mathematics](subject) class [next Tuesday](date)?
+    - Got the schedule for [English Literature](subject) class?
+    - What's the timing for [Biology](subject) class?
+    - When's the [History](subject) class [tomorrow](date)?
+    - What time is [Dr. Mustafa's](teacher) class this week?
+    - When is [Chemistry](subject) class [next Monday](date)?
+    - Got [Dr. Ali's](teacher) class schedule for [next week](date)?
+    - What time is [Dr. Abdullah's](teacher) class [next Tuesday](date)?
+    - What's the time for [Physics](subject) class [next Wednesday](date)?
+    - When's [Dr. Tariq's](teacher) class?
+    - Got the schedule for [Mathematics](subject) class [next week](date)?
+    - When do I have [English Literature](subject) class [tomorrow](date)?
+    - What's the timing for [Biology](subject) class [next Thursday](date)?
+    - When's the [History](subject) class [next Friday](date)?
+    - What time is [Dr. Ibrahim's](teacher) class [next week](date)?
+    - Got the schedule for [Chemistry](subject) class [next Monday](date)?
+    - When's [Dr. Yasin's](teacher) class [next Tuesday](date)?
+    - What's the time for [Physics](subject) class [next Wednesday](date)?
+    - When is [Dr. Yusuf's](teacher) class [next Thursday](date)?
+    - Got the schedule for [Mathematics](subject) class [next Friday](date)?
+    - What time is [Dr. Omar's](teacher) class [next week](date)?
+    - Got the schedule for [English Literature](subject) class [next Monday](date)?
+    - When do I have [Biology](subject) class [next Tuesday](date)?
+    - What's the timing for [History](subject) class [next Wednesday](date)?
+    - When's [Dr. Bilal's](teacher) class [next Thursday](date)?
+    - Got [Dr. Faisal's](teacher) class schedule [next Friday](date)?
+    - Could you please inform me about [Dr. Ahmed's](teacher) class schedule?
+    - What is the schedule for [Physics](subject) class this week?
+    - Could you please tell me when [Mathematics](subject) class will be held [next Tuesday](date)?
+    - I would like to know the schedule for [English Literature](subject) class.
+    - Can you please provide the class schedule for [Biology](subject)?
+    - I need to know the schedule for [History](subject) class [tomorrow](date).
+    - Could you please tell me [Dr. Mustafa's](teacher) class schedule for this week?
+    - I would like to know when [Chemistry](subject) class will be held [next Monday](date)?
+    - Please inform me about [Dr. Ali's](teacher) class schedule for [next week](date).
+    - I need to check [Dr. Abdullah's](teacher) schedule for [next Tuesday](date).
+    - Can you tell me the schedule for [Physics](subject) class [next Wednesday](date)?
+    - I would like to know the class schedule for [Dr. Tariq](teacher).
+    - Please provide the schedule for [Mathematics](subject) class for [next week](date).
+    - I need to know when [English Literature](subject) class will be held [tomorrow](date)?
+    - Can you please tell me the schedule for [Biology](subject) class [next Thursday](date)?
+    - Could you please inform me about [History](subject) class schedule for [next Friday](date)?
+    - What is [Dr. Ibrahim's](teacher) class schedule for [next week](date)?
+    - Can you please provide the schedule for [Chemistry](subject) class for [next Monday](date)?
+    - I need to know the schedule for [Dr. Yasin's](teacher) class for [next Tuesday](date)?
+    - Could you please tell me [Physics](subject) class schedule for [next Wednesday](date)?
+    - What is [Dr. Yusuf's](teacher) class schedule for [next Thursday](date)?
+    - I would like to know the schedule for [Mathematics](subject) class [next Friday](date)?
+    - Please inform me about [Dr. Omar's](teacher) class schedule for [next week](date).
+    - Can you please tell me the schedule for [English Literature](subject) class [next Monday](date)?
+    - I need to know when [Biology](subject) class will be held [next Tuesday](date)?
+    - Could you please inform me about [History](subject) class schedule for [next Wednesday](date)?
+    - I would like to know [Dr. Bilal's](teacher) class schedule for [next Thursday](date).
+    - Can you please provide [Dr. Faisal's](teacher) class schedule for [next Friday](date)?
+    - When is [Dr. Smith's](teacher) class?
+    - What's the time for [Physics](subject) class this week?
+    - When do I have [Mathematics](subject) class [next Tuesday](date)?
+    - Got the schedule for [English Literature](subject) class?
+    - What's the timing for [Biology](subject) class?
+    - When's the [History](subject) class [tomorrow](date)?
+    - What time is [Dr. Johnson's](teacher) class this week?
+    - When is [Chemistry](subject) class [next Monday](date)?
+    - Got [Dr. Williams'](teacher) class schedule for [next week](date)?
+    - What time is [Dr. Thompson's](teacher) class [next Tuesday](date)?
+    - What's the time for [Physics](subject) class [next Wednesday](date)?
+    - When's [Dr. Jackson's](teacher) class?
+    - Got the schedule for [Mathematics](subject) class [next week](date)?
+    - When do I have [English Literature](subject) class [tomorrow](date)?
+    - What's the timing for [Biology](subject) class [next Thursday](date)?
+    - When's the [History](subject) class [next Friday](date)?
+    - What time is [Dr. Anderson's](teacher) class [next week](date)?
+    - Got the schedule for [Chemistry](subject) class [next Monday](date)?
+    - When's [Dr. Taylor's](teacher) class [next Tuesday](date)?
+    - What's the time for [Physics](subject) class [next Wednesday](date)?
+    - When is [Dr. Thomas'](teacher) class [next Thursday](date)?
+    - Got the schedule for [Mathematics](subject) class [next Friday](date)?
+    - What time is [Dr. White's](teacher) class [next week](date)?
+    - Got the schedule for [English Literature](subject) class [next Monday](date)?
+    - When do I have [Biology](subject) class [next Tuesday](date)?
+    - What's the timing for [History](subject) class [next Wednesday](date)?
+    - When's [Dr. Harris'](teacher) class [next Thursday](date)?
+    - Got [Dr. Martin's](teacher) class schedule [next Friday](date)?
+    - Could you please inform me about [Dr. Smith's](teacher) class schedule?
+    - What is the schedule for [Physics](subject) class this week?
+    - Could you please tell me when [Mathematics](subject) class will be held [next Tuesday](date)?
+    - I would like to know the schedule for [English Literature](subject) class.
+    - Can you please provide the class schedule for [Biology](subject)?
+    - I need to know the schedule for [History](subject) class [tomorrow](date).
+    - Could you please tell me [Dr. Johnson's](teacher) class schedule for this week?
+    - I would like to know when [Chemistry](subject) class will be held [next Monday](date)?
+    - Please inform me about [Dr. Williams'](teacher) class schedule for [next week](date).
+    - I need to check [Dr. Thompson's](teacher) schedule for [next Tuesday](date).
+    - Can you tell me the schedule for [Physics](subject) class [next Wednesday](date)?
+    - I would like to know the class schedule for [Dr. Jackson](teacher).
+    - Please provide the schedule for [Mathematics](subject) class for [next week](date).
+    - I need to know when [English Literature](subject) class will be held [tomorrow](date)?
+    - Can you please tell me the schedule for [Biology](subject) class [next Thursday](date)?
+    - Could you please inform me about [History](subject) class schedule for [next Friday](date)?
+    - What is [Dr. Anderson's](teacher) class schedule for [next week](date)?
+    - Can you please provide the schedule for [Chemistry](subject) class for [next Monday](date)?
+    - I need to know the schedule for [Dr. Taylor's](teacher) class for [next Tuesday](date)?
+    - Could you please tell me [Physics](subject) class schedule for [next Wednesday](date)?
+    - What is [Dr. Thomas'](teacher) class schedule for [next Thursday](date)?
+    - I would like to know the schedule for [Mathematics](subject) class [next Friday](date)?
+    - Please inform me about [Dr. White's](teacher) class schedule for [next week](date).
+    - Can you please tell me the schedule for [English Literature](subject) class [next Monday](date)?
+    - I need to know when [Biology](subject) class will be held [next Tuesday](date)?
+    - Could you please inform me about [History](subject) class schedule for [next Wednesday](date)?
+    - I would like to know [Dr. Harris'](teacher) class schedule for [next Thursday](date).
+    - Can you please provide [Dr. Martin's](teacher) class schedule for [next Friday](date)?
+
+- intent: ask_for_courses
+  examples: |
+    - Who is teaching the [Advanced AI](course) course?
+    - Can I select the [Data Structures](course) course?
+    - What are the prerequisites for the [Algorithms](course) course?
+    - Who is the instructor for the [Machine Learning](course) course?
+    - Can I enroll in the [Databases](course) course?
+    - What are the requirements for the [Software Engineering](course) course?
+    - Who is teaching the [Operating Systems](course) course?
+    - Can I know the prerequisites for the [Network Security](course) course?
+    - Who is the professor for the [Cloud Computing](course) course?
+    - Can I get the details of the [Data Science](course) course?
+    - Who is the professor for the [Artificial Intelligence](course) course?
+    - Can I enroll in the [Cloud Computing](course) course?
+    - What are the prerequisites for the [Cyber Security](course) course?
+    - Who's teaching the [Big Data](course) course this semester?
+    - Can I know the requirements for the [Data Mining](course) course?
+    - Who's the instructor for the [Game Development](course) course?
+    - Can I select the [Web Development](course) course this semester?
+    - What are the prerequisites for the [Database Management](course) course?
+    - Who is teaching the [Computer Graphics](course) course?
+    - Can I enroll in the [Software Testing](course) course?
+    - Can you give me information about [Computer Science](course)?
+    - I want to know more about [Business Management](course).
+    - Tell me about the [Biology](course) course.
+    - I'm interested in [Chemistry](course).
+    - I'd like details about the [Physics](course) course.
+    - What can you tell me about [Maths](course)?
+    - Can you show me information about [English](course)?
+    - I'd like to know more about [History](course).
+    - Can you tell me about the [Geography](course) course?
+    - I'm interested in [Economics](course).
+    - Tell me about the [Calculus](course) course.
+    - Got any info on [Advanced Chemistry](course)?
+    - What's [Introduction to Physics](course) all about?
+    - I'm thinking of taking [Microeconomics](course). What's it like?
+    - What's [Macroeconomics](course) all about?
+    - Can you tell me about [English Literature](course)?
+    - I'm thinking of [Biology](course), what's it about?
+    - What do I need to know about [Data Structures](course)?
+    - Tell me more about [Algorithms](course).
+    - What's [Computer Networks](course) like?
+    - I'm thinking about [Artificial Intelligence](course). What's it like?
+    - What's needed for [Machine Learning](course)?
+    - What's [Differential Equations](course) all about?
+    - Tell me about [Quantum Physics](course).
+    - I'm thinking of [Organic Chemistry](course). What's it like?
+    - What's [Linear Algebra](course) all about?
+    - Can you tell me more about [Probability and Statistics](course)?
+    - What's [Geometry](course) like?
+    - I'm thinking of taking [Philosophy](course). What do I need?
+    - What do I need to know about [Sociology](course)?
+    - What's [Political Science](course) all about?
+    - I'm thinking about [Psychology](course). What's it like?
+    - Tell me about [Accounting](course).
+    - I'm thinking of [Business Management](course). What's it like?
+    - What's [Marketing](course) all about?
+    - I'm considering [Human Resources](course). What do I need to know?
+    - What's [Entrepreneurship](course) like?
+    - Can you tell me about [International Relations](course)?
+    - What's [Journalism](course) like?
+    - I'm thinking about [Computer Science](course). What do I need?
+    - Could you please provide information about the [Calculus](course) course?
+    - I would like to know more about the [Advanced Chemistry](course) course.
+    - Can you please tell me about the [Introduction to Physics](course) course?
+    - I am interested in [Microeconomics](course). Can you provide information on this?
+    - What can you tell me about the [Macroeconomics](course) course?
+    - Could you provide details about [English Literature](course)?
+    - I am thinking of taking [Biology](course), what do I need to know?
+    - What can you tell me about the [Data Structures](course) course?
+    - I would like to know more about [Algorithms](course).
+    - Could you provide more information on [Computer Networks](course)?
+    - I'm considering [Artificial Intelligence](course). Can you provide more information?
+    - What are the requirements for [Machine Learning](course)?
+    - I am interested in [Differential Equations](course). What can you tell me about it?
+    - Can you provide information about the [Quantum Physics](course) course?
+    - I'm considering [Organic Chemistry](course). Can you provide more details?
+    - What can you tell me about [Linear Algebra](course)?
+    - I would like to know more about the [Probability and Statistics](course) course.
+    - Could you please provide information about [Geometry](course)?
+    - I'm considering taking [Philosophy](course). What are the requirements?
+    - What do I need to know about [Sociology](course)?
+    - Could you provide more details about [Political Science](course)?
+    - I'm considering [Psychology](course). Can you provide more information?
+    - What can you tell me about the [Accounting](course) course?
+    - I would like to know more about [Business Management](course).
+    - Could you provide more information on [Marketing](course)?
+    - I'm considering [Human Resources](course). Can you provide more details?
+    - What can you tell me about [Entrepreneurship](course)?
+    - I would like to know more about the [International Relations](course) course.
+    - Could you please provide information about [Journalism](course)?
+    - I'm considering taking [Computer Science](course). What are the requirements?
+
+- intent: ask_for_attendance
+  examples: |
+    - What is my attendance percentage for this [semester](time_period)?
+    - Can I know my attendance for the [month of May](time_period)?
+    - What's my attendance for the [last semester](time_period)?
+    - Can you let me know my attendance for [June](time_period)?
+    - What is my attendance percentage for [2023](time_period)?
+    - Can I check my attendance for this [academic year](time_period)?
+    - What is my attendance for the [first semester](time_period)?
+    - Can you provide my attendance details for the [second semester](time_period)?
+    - What's my attendance for the [winter semester](time_period)?
+    - Can I know my attendance for the [summer semester](time_period)?
+    - Can you tell me my attendance for the [past month](time_period)?
+    - I would like to know my attendance for the [last semester](time_period).
+    - Can I know my attendance for [April](time_period)?
+    - What's my attendance for the [current semester](time_period)?
+    - Can I check my attendance for this [academic year](time_period)?
+    - What is my attendance for the [first semester](time_period)?
+    - Can you provide my attendance details for the [second semester](time_period)?
+    - What's my attendance for the [winter semester](time_period)?
+    - Can I know my attendance for the [summer semester](time_period)?
+    - Can I check my attendance percentage for this [month](time_period)?
+    - Can you tell me my attendance for [this month](time_period)?
+    - What's my attendance like for [this semester](time_period)?
+    - How's my attendance for [the last week](time_period)?
+    - Can you check my attendance for [the last month](time_period)?
+    - What's my attendance for [this academic year](time_period)?
+    - Can you tell me my attendance for [the last three months](time_period)?
+    - How's my attendance for [the last six months](time_period)?
+    - What's my attendance for [this week](time_period)?
+    - Can you tell me my attendance for [the past year](time_period)?
+    - How's my attendance for [the past two semesters](time_period)?
+    - What's my attendance for [the past two weeks](time_period)?
+    - Can you tell me my attendance for [January](time_period)?
+    - How's my attendance for [February](time_period)?
+    - What's my attendance for [March](time_period)?
+    - Can you tell me my attendance for [April](time_period)?
+    - How's my attendance for [May](time_period)?
+    - What's my attendance for [June](time_period)?
+    - Can you tell me my attendance for [July](time_period)?
+    - How's my attendance for [August](time_period)?
+    - What's my attendance for [September](time_period)?
+    - Can you tell me my attendance for [October](time_period)?
+    - How's my attendance for [November](time_period)?
+    - What's my attendance for [December](time_period)?
+    - Can you tell me my attendance for [the first semester](time_period)?
+    - How's my attendance for [the second semester](time_period)?
+    - What's my attendance for [the third semester](time_period)?
+    - Can you tell me my attendance for [the fourth semester](time_period)?
+    - How's my attendance for [the fifth semester](time_period)?
+    - What's my attendance for [the sixth semester](time_period)?
+    - What's my attendance like for [this month](time_period)?
+    - Can you tell me my attendance for [last week](time_period)?
+    - How's my attendance looking for [this semester](time_period)?
+    - I'd like to know my attendance for [this academic year](time_period).
+    - Can you show me my attendance for [the last three months](time_period)?
+    - I'm interested in my attendance for [the last six months](time_period).
+    - What's my attendance for [this week](time_period)?
+    - Can you tell me my attendance for [the past year](time_period)?
+    - How's my attendance for [the past two semesters](time_period)?
+    - I'd like to know my attendance for [the last month](time_period).
+    - Can you tell me my attendance for [the seventh semester](time_period)?
+    - Could you please inform me about my attendance percentage for [this month](time_period)?
+    - I would like to know my attendance rate for [this semester](time_period).
+    - Can you please tell me about my attendance for [the last week](time_period)?
+    - I am interested in knowing my attendance percentage for [the last month](time_period).
+    - Could you please provide my attendance details for [this academic year](time_period)?
+    - I would like to check my attendance for [the last three months](time_period).
+    - Can you please update me on my attendance for [the last six months](time_period)?
+    - I need to know my attendance percentage for [this week](time_period).
+    - Could you please inform me about my attendance for [the past year](time_period)?
+    - I would like to know my attendance rate for [the past two semesters](time_period).
+    - Can you please tell me about my attendance for [the past two weeks](time_period)?
+    - I am interested in knowing my attendance for [January](time_period).
+    - Could you please provide my attendance details for [February](time_period)?
+    - I would like to check my attendance for [March](time_period).
+    - Can you please update me on my attendance for [April](time_period)?
+    - I need to know my attendance percentage for [May](time_period).
+    - Could you please inform me about my attendance for [June](time_period)?
+    - I would like to know my attendance rate for [July](time_period).
+    - Can you please tell me about my attendance for [August](time_period)?
+    - I am interested in knowing my attendance for [September](time_period).
+    - Could you please provide my attendance details for [October](time_period)?
+    - I would like to check my attendance for [November](time_period).
+    - Can you please update me on my attendance for [December](time_period)?
+    - I need to know my attendance percentage for [the first semester](time_period).
+    - Could you please inform me about my attendance for [the second semester](time_period)?
+    - I would like to know my attendance rate for [the third semester](time_period).
+    - Can you please tell me about my attendance for [the fourth semester](time_period)?
+    - I am interested in knowing my attendance for [the fifth semester](time_period).
+    - Could you please provide my attendance details for [the sixth semester](time_period)?
+    - I would like to check my attendance for [the seventh semester](time_period).
+- intent: affirm
+  examples: |
+    - Yes.
+    - Yeah.
+    - Yep.
+    - Absolutely.
+    - Definitely.
+    - Yes, indeed.
+    - Sure.
+    - Sure thing.
+    - Of course.
+    - That's correct.
+    - Correct.
+    - Right.
+    - That's right.
+    - Exactly.
+    - You got it.
+    - That's true.
+    - True.
+    - Uh-huh.
+    - OK.
+    - Okay.
+    - Sounds good.
+    - I agree.
+    - Yes, please.
+    - Affirmative.
+    - Very well.
+    - Yep, that's right.
+    - Yes, that's it.
+    - Absolutely correct.
+    - That's exactly right.
+    - Yes, you got it.
+    - Yeah, that's correct.
+    - Yes, exactly.
+    - Indeed.
+    - Yeah, that's true.
+    - You're right.
+    - Yes, I agree.
+    - I'm in agreement.
+    - I concur.
+    - Roger that.
+    - I believe so.
+    - Certainly.
+    - Positively.
+    - Yes, I confirm.
+    - Absolutely right.
+    - Exactly right.
+    - That's just it.
+    - Precisely.
+    - Quite so.
+    - Just so.
+    - I say yes.
+    - That's the fact.
+    - Yes, I do.
+    - Indeed, I do.
+    - Yes, for sure.
+    - You bet.
+    - I think so.
+    - I reckon so.
+    - Totally.
+    - Undeniably.
+    - For certain.
+    - Assuredly.
+    - Verily.
+    - Beyond doubt.
+    - Unquestionably.
+    - Yes, sir.
+    - Yes, ma'am.
+    - It is so.
+    - I'm positive.
+    - I do believe so.
+    - I am sure.
+    - I'm certain.
+    - You can say that again.
+    - Indubitably.
+    - Aye.
+    - Clearly.
+    - Decidedly.
+    - Without a doubt.
+    - I couldn't agree more.
+    - Sure as can be.
+    - It's a deal.
+    - Thumbs up.
+    - I hold with that.
+    - I'm all for it.
+    - I give the nod to that.
+    - I'm up for it.
+    - Yes, without a doubt.
+    - That goes without saying.
+    - Without question.
+    - It stands to reason.
+    - Yes, no problem.
+    - Yes, I'm sure.
+    - Most certainly.
+    - That's a given.
+    - It's a go.
+    - All right.
+    - Yes, that's a fact.
+    - Yes, by all means.
+    - True enough.
+
+- intent: decline
+  examples: |
+    - No.
+    - Nah.
+    - Nope.
+    - Absolutely not.
+    - Definitely not.
+    - No, thank you.
+    - Not really.
+    - I don't think so.
+    - I'm afraid not.
+    - That's incorrect.
+    - Wrong.
+    - That's not right.
+    - Not exactly.
+    - Not quite.
+    - I disagree.
+    - I don't agree.
+    - No way.
+    - Not at all.
+    - Certainly not.
+    - I'm not sure.
+    - I'd rather not.
+    - I don't feel like it.
+    - I wouldn't.
+    - I can't.
+    - I won't.
+    - I'll pass.
+    - Not this time.
+    - I'm good.
+    - I think I'll skip it.
+    - Not interested.
+    - I don't want to.
+    - I'm not up for it.
+    - Doesn't sound good.
+    - I'm not in the mood.
+    - No, I can't.
+    - No, I won't.
+    - Not now.
+    - Maybe later.
+    - I'm busy.
+    - I'm occupied.
+    - Not likely.
+    - Unlikely.
+    - No, I don't think so.
+    - No, not really.
+    - No, I don't believe so.
+    - No, not at all.
+    - I shouldn't.
+    - I wouldn't dare.
+    - I'm not into it.
+    - I'm not feeling it.
+    - I don't buy it.
+    - I don't see it that way.
+    - It's not my thing.
+    - I beg to differ.
+    - Don't count on it.
+    - I don't fancy that.
+    - Not for me.
+    - I refuse.
+    - It's not for me.
+    - I'm not buying it.
+    - That's not my cup of tea.
+    - I would say no.
+    - I'm not convinced.
+    - Not a chance.
+    - No chance.
+    - Doesn't look like it.
+    - Doesn't seem like it.
+    - No, not quite.
+    - Not on your life.
+    - No, I don't.
+    - I don't see why.
+    - No, and that's final.
+    - I'm not keen on it.
+    - Not my style.
+    - No, I disagree.
+    - Not preferable.
+    - No, I can't agree.
+    - No, not for me.
+    - No, I don't feel like it.
+    - I'm not the right person.
+    - I'm not the one.
+    - No, that's not for me.
+    - I would rather not.
+    - I'd say no.
+    - No, not this time.
+    - I'm not so sure.
+    - No, I wouldn't say so.
+    - I'm not certain.
+    - I'll have to say no.
+    - I'll have to decline.
+    - I'd have to refuse.
+    - Not in a million years.
+    - No, I don't reckon.
+
+- intent: nlu_fallback
+  examples: |
+    - Tell me a joke.
+    - What's the weather like today?
+    - What's the time?
+    - Who won the football match yesterday?
+    - What's your name?
+    - Where are you from?
+    - Do you like pizza?
+    - How old are you?
+    - asdjklfasd
+    - 123456789
+    - @#$%^&*()
+    - And then the...
+    - Because of the...
+    - Tacos in the...
+    - Jibber jabber woo waa.
+    - Where can I buy a good laptop?
+    - How to make lasagna?
+    - Tell me about the recent developments in quantum physics.
+    - How to train a pet dog?
+
+- intent: greet+ask_for_attendance
+  examples: |
+    - Hi, can you check my attendance for [this month](time_period)?
+    - Hello, what's my attendance for the [semester](time_period)?
+    - Good morning, could you tell me my attendance [percentage](time_period)?
+    - Hey, how's my attendance looking for [this week](time_period)?
+    - Hi, I need to know my attendance for [this month](time_period).
+    - Hiya, what's my current attendance [percentage](time_period)?
+    - Good afternoon, could you update me on my attendance for [this semester](time_period)?
+    - Heya, I want to know about my attendance [last week](time_period).
+    - Hi there, what was my attendance [last month](time_period)?
+    - Hello, can you inform me about my attendance [yesterday](time_period)?
+    - Hi, can you check my attendance for [this month](time_period)?
+    - Hello, what's my attendance for the [semester](time_period)?
+    - Good morning, could you tell me my attendance [percentage](time_period)?
+    - Hey, how's my attendance looking for [this week](time_period)?
+    - Hi, I need to know my attendance for [this month](time_period).
+
+- intent: greet+ask_for_grades
+  examples: |
+    - Hi, could you tell me my grade for [Mathematics](subject)?
+    - Hello, I'd like to know my grade for the [midterm](exam_type).
+    - Good afternoon, can you check my grade in [Physics](subject)?
+    - Hey, what was my grade for the [final exam](exam_type)?
+    - Hi there, I was wondering about my grade in [English class](subject).
+    - Hey there, can you tell me my grades in [Science](subject)?
+    - Hi, what's my grade in [Biology](subject) for the [final exam](exam_type)?
+    - Hello, could you tell me what's my grade in the [midterm](exam_type) for [Chemistry](subject)?
+    - Good day, what's my [Chemistry](subject) grade?
+    - Heya, could you tell me my grades for [Physics](subject)?
+    - Hi, could you tell me my grade for [Mathematics](subject)?
+    - Hello, I'd like to know my grade for the [midterm](exam_type).
+    - Good afternoon, can you check my grade in [Physics](subject)?
+    - Hey, what was my grade for the [final exam](exam_type)?
+    - Hi there, I was wondering about my grade in [English class](subject).
+
+- intent: greet+apply_for_leave
+  examples: |
+    - Hello, I'd like to apply for leave [next week](start_date).
+    - Hi, I need to apply for leave [tomorrow](start_date).
+    - Good morning, I won't be able to attend class [next Tuesday](start_date).
+    - Hey, I need a leave of absence for the [next two days](number_of_leaves).
+    - Hi, I'm not feeling well and would like to apply for [sick leave](reason_for_leave).
+    - Hi there, I need to apply for a leave [today](start_date).
+    - Hello, I'm planning to take leave [next Thursday](start_date) due to a [personal event](reason_for_leave).
+    - Good afternoon, I would like to take [2](number_of_leaves) leaves starting from [Monday](start_date).
+    - Hey, I need to apply for a leave on [Friday](start_date) for [personal work](reason_for_leave).
+    - Hi, I need a leave for [tomorrow](start_date) due to [a doctor's appointment](reason_for_leave).
+    - Hello, I'd like to apply for leave [next week](start_date).
+    - Hi, I need to apply for leave [tomorrow](start_date).
+    - Good morning, I won't be able to attend class [next Tuesday](start_date).
+    - Hey, I need a leave of absence for the [next two days](number_of_leaves).
+    - Hi, I'm not feeling well and would like to apply for [sick leave](reason_for_leave).
+    
+
+
+- intent: greet+ask_for_class_schedule
+  examples: |
+    - Hi, when is [Professor Ahmed](teacher)'s next class?
+    - Hello, could you tell me the schedule for the [Computer Science](subject) class?
+    - Good evening, when is my next [Math](subject) class?
+    - Hey, what's the schedule for [Biology class](subject) tomorrow?
+    - Hi there, when is the next class for [Physics](subject)?
+    - Hey there, can you tell me when is the next [History](subject) class?
+    - Hi, what's the schedule for [Professor Asma](teacher)'s next class?
+    - Hello, could you tell me the schedule for [Math](subject) for [next week](time_period)?
+    - Good afternoon, when's the next class for [Professor Bilal](teacher)?
+    - Hey, what's the schedule for [Professor Jamal](teacher)'s class [tomorrow](time_period)?
+    - Hi, could you tell me my grade for [Mathematics](subject)?
+    - Hello, I'd like to know my grade for the [midterm](exam_type).
+    - Good afternoon, can you check my grade in [Physics](subject)?
+    - Hey, what was my grade for the [final exam](exam_type)?
+    - Hi there, I was wondering about my grade in [English class](subject).
+
+- intent: greet+ask_for_courses
+  examples: |
+    - Hi, can I know who is teaching the [Machine Learning](course) course?
+    - Hello, I want to know the requirements for the [Data Structures](course) course.
+    - Good afternoon, who is the instructor for the [Cybersecurity](course) course?
+    - Hey, can I still enroll in the [Artificial Intelligence](course) course?
+    - Hi, what are the prerequisites for the [Computer Networks](course) course?
+    - Hello, who is the teacher for the [Programming Fundamentals](course) course?
+    - Good morning, what are the requirements for the [Web Development](course) course?
+    - Hey, who's teaching the [Data Science](course) course?
+    - Hi there, can I know the instructor for the [Digital Logic Design](course) course?
+    - Hello, what are the requirements to enroll in the [Software Engineering](course) course?
+    - Hi, can I know who is teaching the [Machine Learning](course) course?
+    - Hello, I want to know the requirements for the [Data Structures](course) course.
+    - Good afternoon, who is the instructor for the [Cybersecurity](course) course?
+    - Hey, can I still enroll in the [Artificial Intelligence](course) course
+
+
+- lookup: subject
+  examples: |
+    - Mathematics
+    - English
+    - Biology
+    - Physics
+    - Chemistry
+    - Computer Science
+    - History
+    - Geography
+    - Art
+    - Music
+    - Economics
+    - Psychology
+    - Sociology
+    - Political Science
+    - Literature
+    - Philosophy
+    - Business
+    - Accounting
+    - Statistics
+    - Anthropology
+
+- lookup: teacher
+  examples: |
+    - Professor Ahmed
+    - Dr. Asma
+    - Professor Bilal
+    - Dr. Jamal
+    - Dr. Fatima
+    - Professor Zainab
+    - Dr. Umar
+    - Professor Aisha
+    - Dr. Abdul
+    - Professor Sara
+    - Dr. Ali
+    - Professor Yasmin
+    - Dr. Imran
+    - Professor Nadia
+    - Dr. Samira
+    - Professor Hassan
+    - Dr. Nida
+    - Professor Khalid
+    - Dr. Farah
+    - Professor Omar
+
+- lookup: course
+  examples: |
+    - Machine Learning
+    - Data Structures
+    - Cybersecurity
+    - Artificial Intelligence
+    - Computer Networks
+    - Programming Fundamentals
+    - Web Development
+    - Data Science
+    - Digital Logic Design
+    - Software Engineering
+    - Database Systems
+    - Operating Systems
+    - Network Security
+    - Mobile Application Development
+    - Algorithm Design
+    - Computer Graphics
+    - Human-Computer Interaction
+    - Software Testing
+    - Information Retrieval
+    - Cryptography
+
+- lookup: time_period
+  examples: |
+    - today
+    - tomorrow
+    - this week
+    - next week
+    - this month
+    - next month
+    - this semester
+    - next semester
+    - this year
+    - next year
+    - current
+    - previous
+    - upcoming
+    - last week
+    - last month
+    - last semester
+    - last year
+
+
+- lookup: start_date
+  examples: |
+    - today
+    - tomorrow
+    - next Sunday
+    - next Monday
+    - next Tuesday
+    - next Wednesday
+    - next Thursday
+    - next Friday
+    - next Saturday
+    - this Sunday
+    - this Monday
+    - this Tuesday
+    - this Wednesday
+    - this Thursday
+    - this Friday
+    - this Saturday
+    - upcoming Monday
+    - upcoming Tuesday
+    - upcoming Wednesday
+    - upcoming Thursday
+    - upcoming Friday
+    - upcoming Saturday
+    - upcoming Sunday
